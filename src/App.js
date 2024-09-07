@@ -1,8 +1,9 @@
 import "./App.css";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import TaskInput from "./components/TaskInput";
+import TaskList from "./components/TaskList";
 
-function App() {
+const App = () => {
   const [tasks, setTasks] = useState([]);
 
   const addTask = (task) => {
@@ -10,11 +11,12 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>Task Tracker App</h1>
+    <div>
+      <h1>Task Tracker</h1>
       <TaskInput addTask={addTask} />
+      <TaskList tasks={tasks} />
     </div>
   );
-}
+};
 
 export default App;
