@@ -31,6 +31,8 @@ The **Task Tracker App** is a simple task management tool built with **ReactJS**
 - **GitHub:** To host the project's code and collaborate with others.
 
 
+
+
 # Getting Started with Create React App
 
 ## Available Scripts
