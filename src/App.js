@@ -10,11 +10,16 @@ const App = () => {
     setTasks([...tasks, task]);
   };
 
+  const deleteTask = (index) => {
+    setTasks(tasks.filter((_, i) => i !== index));
+  };
+
+
   return (
     <div>
       <h1>Task Tracker</h1>
       <TaskInput addTask={addTask} />
-      <TaskList tasks={tasks} />
+      <TaskList tasks={tasks} deleteTask={deleteTask} />
     </div>
   );
 };
