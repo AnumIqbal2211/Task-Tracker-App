@@ -1,4 +1,4 @@
-import "./App.css";
+import "./assets/css/style.css";
 import React, { useState } from "react";
 import TaskInput from "./components/TaskInput";
 import TaskList from "./components/TaskList";
@@ -14,10 +14,9 @@ const App = () => {
     setTasks(tasks.filter((_, i) => i !== index));
   };
 
-
   return (
-    <div>
-      <h1>Task Tracker</h1>
+    <div className="task-app-container">
+      <h1 className="app-title">Task Tracker App</h1>
       <TaskInput addTask={addTask} />
       <TaskList tasks={tasks} deleteTask={deleteTask} />
     </div>

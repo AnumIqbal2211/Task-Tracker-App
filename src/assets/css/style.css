@@ -1,0 +1,112 @@
+/* General styling for the app container */
+.task-app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #eef2f3;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Styling for the app title */
+.app-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Styling for the task input form */
+form {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #118691;
+}
+
+/* Styling the Add Task button */
+button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  border: none;
+  background-color: #de0c0c;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7e0202;
+}
+
+/* Styling for the task list */
+ul.task-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 500px;
+}
+
+ul.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+ul.task-list li:hover {
+  background-color: #f1f1f1;
+}
+
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type="text"] {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  ul.task-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  ul.task-list li button {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
