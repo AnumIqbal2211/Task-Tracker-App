@@ -1,4 +1,5 @@
 import React from "react";
+import { FaTrashAlt } from "react-icons/fa";
 
 const TaskList = ({ tasks, deleteTask }) => {
   return (
@@ -6,7 +7,9 @@ const TaskList = ({ tasks, deleteTask }) => {
       {tasks.map((task, index) => (
         <li key={index}>
           {task}
-          <button onClick={() => deleteTask(index)}>Delete</button>
+          <button onClick={() => deleteTask(index)}>
+            <FaTrashAlt />
+          </button>
         </li>
       ))}
     </ul>
